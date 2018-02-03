@@ -53,6 +53,7 @@ tr {
   background-image: url("O.jpg");
   background-size: cover;
   background-position: center;
+  height:180px;
   opacity: .3;
 }
 
