@@ -67,7 +67,7 @@ tr {
 #container-box {
   width: 500px;
   height: 540px;
-  border: 1px solid black;
+  
   display: flex;
   justify-content: center;
   align-items: center;
