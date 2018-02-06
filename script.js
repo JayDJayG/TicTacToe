@@ -1,8 +1,6 @@
-//beginning script for the 'initializing screen'
-var initialize = document.querySelector('.initialize');
-var button = document.querySelector('.button');
+var button = document.querySelector(".button")
+var initialsc = document.querySelector(".initialize")
 
-
-button.addEventListener('click', function(){
-initialize.classList.toggle('hidden');
-});
+    button.addEventListener("click", function() {
+    initialsc.classList.add("hidden");}
+    )

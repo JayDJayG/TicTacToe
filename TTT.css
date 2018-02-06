@@ -17,18 +17,39 @@ body{
   width:100%;
   background: white;
   font-size:2rem;
+  position: relative;
+  z-index: 10;
 }
 
 .initialize {
   height:100%;
   width:100%;
   background:gray;
-  position:relative;
+  position:absolute;
   display:block;
+  z-index: 11;
 }
 
 .hidden {
   display:none;
+}
+
+.banner {
+  height:200px;
+  width:800px;
+  font-family: Rammetto One, cursive;
+  font-size: 6rem;
+  top:40%;
+  background:pink;
+  position: absolute;
+  top:30%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.subtitle{
+  font-size:3rem;
+  font-family: Nanum Pen Script;
 }
 
 .button{
