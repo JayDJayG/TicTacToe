@@ -6,7 +6,7 @@
 <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Rammetto+One" rel="stylesheet">
 </head>
 <body>
-  
+
   <div class="initialize">
     <div class="banner">
       <span class="title">Tic Tac Toe</span>
@@ -16,29 +16,31 @@
     <div class="button">Start</div>
   </div>
 
-
-
   <div class="container">
-    <div class="board">
-      <table cellspacing="0" cellpadding="0" style="width:550px;">
-        <tr>
-          <td class="border-right border-bottom"><div class="o w1">W1</div></td>
-          <td class="border-right border-bottom"><div class="w2">W2</div></td>
-          <td class="border-bottom"><div class="o w3">W3</div></td>
-        </tr>
-        <tr>
-          <td class="border-bottom border-right"><div class="x Y1">Y1</div></td>
-          <td class="border-bottom border-right"><div class="o y y2">Y2</div></td>
-          <td class="border-bottom"><div class="y x Y3">Y3</div></td>
-        </tr>
-        <tr>
-          <td class="border-right"><div class="x z1"></div></td>
-          <td class="border-right"><div class="x z2"></div></td></td>
-          <td class="z3"><div class="o z3"></div></td>
-        </tr>
+    <div >
+      <div id = "container-box" class="board" onmousemove="mouseFunction(event)">
+        <table cellspacing="0" cellpadding="0" style="width:100%">
+          <tr>
+            <td id = "w1" class="border-right border-bottom w w1 ">W1</td>
+            <td id = "w2" class="border-right border-bottom w w2 ">W2</td>
+            <td id = "w3" class="border-bottom w w3">W3</td>
+          </tr>
+          <tr>
+            <td id = "y1" class="border-bottom border-right y y1 ">Y1</td>
+            <td id = "y2" class="border-bottom border-right y y2 ">Y2</td>
+            <td id = "y3" class="border-bottom y y3">Y3</td>
+          </tr>
+          <tr>
+            <td id = "z1" class="border-right z z1">Z1</td>
+            <td id = "z2" class="border-right z z2 ">Z2</td>
+            <td id = "z3" class="z3 ">Z3</td>
+          </tr>
       </table>
+      </div>
     </div>
   </div>
 </body>
+
 <script type="text/javascript" src="script.js"></script>
+
 </html>
