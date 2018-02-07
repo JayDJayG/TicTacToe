@@ -19,6 +19,9 @@ body{
   font-size:2rem;
   position: relative;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .initialize {
@@ -111,6 +114,4 @@ tr {
   display: flex;
   justify-content: center;
   align-items: center;
-
-
 }
