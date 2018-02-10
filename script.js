@@ -1,5 +1,5 @@
 
-var button = document.querySelector(".button");
+/*var button = document.querySelector(".button");
 var initialsc = document.querySelector(".initialize");
 
     button.addEventListener("click", function() {
@@ -7,18 +7,52 @@ var initialsc = document.querySelector(".initialize");
   );
 
 //Board variable initialization
+*/
 
-var w1 = document.getElementsByClassName("w1");
-var w2 = document.getElementsByClassName("w2");
-var w3 = document.getElementsByClassName("w3");
-var y1 = document.getElementsByClassName("y1");
-var y2 = document.getElementsByClassName("y2");
-var y3 = document.getElementsByClassName("y3");
-var z1 = document.getElementsByClassName("z1");
-var z2 = document.getElementsByClassName("z2");
-var z3 = document.getElementsByClassName("z3");
+var w1=document.querySelector("#w1");
+var w2=document.querySelector("#w2");
+var w3=document.querySelector("#w3");
+var y1=document.querySelector("#y1");
+var y2=document.querySelector("#y2");
+var y3=document.querySelector("#y3");
+var z1=document.querySelector("#z1");
+var z2=document.querySelector("#z2");
+var z3=document.querySelector("#z3");
+
+var cellId = 0;
+
+var token ="x";
+var tokenHover = "xh";
+
+function hoverOn() {
+  cellID.classList.add(tokenHover);
+  };
+
+w1.addEventListener("mouseover", function() {cellId=w1; hoverOn; return cellId;});
+w2.addEventListener("mouseover", function() {cellId=w2; return cellId;});
+w3.addEventListener("mouseover", function() {cellId=w3; return cellId;});
+y1.addEventListener("mouseover", function() {cellId=y1; return cellId;});
+y2.addEventListener("mouseover", function() {cellId=y2; return cellId;});
+y3.addEventListener("mouseover", function() {cellId=y3; return cellId;});
+z1.addEventListener("mouseover", function() {cellId=z1; return cellId;});
+z2.addEventListener("mouseover", function() {cellId=z2; return cellId;});
+z3.addEventListener("mouseover", function() {cellId=z3; return cellId;});
+
+function hoverOff() {
+  cellId.classList.remove(tokenHover)
+};
+
+function cellClick() {
+  cellId.classList.add(token)
+  cellId.removeEventListener("mouseover", hoverOn);
+  }
+  
+/*w1.addEventListener("mouseover", hoverOn);*/
+cellId.addEventListener("mouseout", hoverOff);
+cellId.addEventListener("click", cellClick);
 
 
+  /*
 var filtered = [];
 
 
@@ -131,3 +165,4 @@ if (x >= 517 && x < 684){
     }
 
 }
+*/

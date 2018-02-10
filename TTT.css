@@ -108,6 +108,13 @@ tr {
   background-position: center;
 }
 
+.xh {
+  background-image: url("X.jpg");
+  opacity:.3;
+  background-size: cover;
+  background-position: center;
+}
+
 #container-box {
   width: 500px;
   height: 540px;
