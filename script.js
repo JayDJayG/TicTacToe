@@ -49,8 +49,6 @@ function classCleaning(arr){
 
 }
 
-
-
 //The mouseFunction Function handles the exact position of the mouse,
 
  function mouseFunction(e) {
@@ -65,7 +63,7 @@ function classCleaning(arr){
 //First column handeling
 if (x >= 517 && x < 684){
 
-    if(y >= 93 && y <= 269){
+    if(y >= 93 && y <= 270){
 
       classCleaning(arrayCleaning("w1"));
       element = document.getElementById("w1");
@@ -88,7 +86,7 @@ if (x >= 517 && x < 684){
 
   else if(x > 685 && x < 855){
 
-    if(y >= 93 && y < 269){
+    if(y >= 93 && y < 270){
 
       classCleaning(arrayCleaning("w2"));
       element = document.getElementById("w2");
@@ -110,7 +108,7 @@ if (x >= 517 && x < 684){
   }
 
   else{
-    if(y >= 93 && y < 269){
+    if(y >= 93 && y < 270){
 
       classCleaning(arrayCleaning("w3"));
       element = document.getElementById("w3");
