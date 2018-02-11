@@ -1,5 +1,5 @@
 
-/*var button = document.querySelector(".button");
+var button = document.querySelector(".button");
 var initialsc = document.querySelector(".initialize");
 
     button.addEventListener("click", function() {
@@ -7,7 +7,7 @@ var initialsc = document.querySelector(".initialize");
   );
 
 //Board variable initialization
-*/
+
 
 var w1=document.querySelector("#w1");
 var w2=document.querySelector("#w2");
@@ -21,24 +21,14 @@ var z3=document.querySelector("#z3");
 
 var cellId = 0;
 
-var token ="x";
-var tokenHover = "xh";
+var token ="o";
+var tokenHover = "oh";
 
 function hoverOn() {
-  cellID.classList.add(tokenHover);
+  cellId.classList.add(tokenHover);
   };
 
-w1.addEventListener("mouseover", function() {cellId=w1; hoverOn; return cellId;});
-w2.addEventListener("mouseover", function() {cellId=w2; return cellId;});
-w3.addEventListener("mouseover", function() {cellId=w3; return cellId;});
-y1.addEventListener("mouseover", function() {cellId=y1; return cellId;});
-y2.addEventListener("mouseover", function() {cellId=y2; return cellId;});
-y3.addEventListener("mouseover", function() {cellId=y3; return cellId;});
-z1.addEventListener("mouseover", function() {cellId=z1; return cellId;});
-z2.addEventListener("mouseover", function() {cellId=z2; return cellId;});
-z3.addEventListener("mouseover", function() {cellId=z3; return cellId;});
-
-function hoverOff() {
+  function hoverOff() {
   cellId.classList.remove(tokenHover)
 };
 
@@ -47,10 +37,21 @@ function cellClick() {
   cellId.removeEventListener("mouseover", hoverOn);
   }
   
-/*w1.addEventListener("mouseover", hoverOn);*/
-cellId.addEventListener("mouseout", hoverOff);
-cellId.addEventListener("click", cellClick);
+function activity() {
+  cellId.addEventListener("mouseover", hoverOn);
+  cellId.addEventListener("mouseout", hoverOff);
+  cellId.addEventListener("click", cellClick);
+}
 
+w1.addEventListener("mouseover", function() {cellId=w1; activity(); return cellId;});
+w2.addEventListener("mouseover", function() {cellId=w2; activity(); return cellId;});
+w3.addEventListener("mouseover", function() {cellId=w3; activity(); return cellId;});
+y1.addEventListener("mouseover", function() {cellId=y1; activity(); return cellId;});
+y2.addEventListener("mouseover", function() {cellId=y2; activity(); return cellId;});
+y3.addEventListener("mouseover", function() {cellId=y3; activity(); return cellId;});
+z1.addEventListener("mouseover", function() {cellId=z1; activity(); return cellId;});
+z2.addEventListener("mouseover", function() {cellId=z2; activity(); return cellId;});
+z3.addEventListener("mouseover", function() {cellId=z3; activity(); return cellId;});
 
   /*
 var filtered = [];

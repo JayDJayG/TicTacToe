@@ -78,6 +78,11 @@ tr {
   height:180px
 }
 
+.cellBox{
+  width:183px;
+  height:180px;
+}
+
 .border-right {
  border-right: 3px solid black;
 }
@@ -98,8 +103,6 @@ tr {
   background-image: url("O.jpg");
   background-size: cover;
   background-position: center;
-  height:180px;
-  opacity: .3;
 }
 
 .x {
@@ -110,6 +113,13 @@ tr {
 
 .xh {
   background-image: url("X.jpg");
+  opacity:.3;
+  background-size: cover;
+  background-position: center;
+}
+
+.oh {
+  background-image: url("O.jpg");
   opacity:.3;
   background-size: cover;
   background-position: center;
