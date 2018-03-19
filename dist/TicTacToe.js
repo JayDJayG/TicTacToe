@@ -71,29 +71,30 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({3:[function(require,module,exports) {
+})({6:[function(require,module,exports) {
 
 var buttonX = document.querySelector("#theX");
 var buttonO = document.querySelector("#theO");
 var initialsc = document.querySelector(".initialize");
 
-var selection = "";
-var preselection = "";
+var token = "";
+var tokenHover = "";
+var cellId = 0;
 
 //Hidding initialization screen and
 buttonX.addEventListener("click", function () {
   initialsc.classList.add("hidden");
-  selection += "x";
-  preselection += "xh";
+  token += "x";
+  tokenHover += "xh";
+  console.log(token, tokenHover);
 });
 
 buttonO.addEventListener("click", function () {
   initialsc.classList.add("hidden");
-  selection += "o";
-  preselection += "oh";
+  token += "o";
+  tokenHover += "oh";
+  console.log(token, tokenHover);
 });
-
-console.log(selection, preselection);
 
 //Board variable initialization
 
@@ -106,12 +107,6 @@ var y3 = document.querySelector("#y3");
 var z1 = document.querySelector("#z1");
 var z2 = document.querySelector("#z2");
 var z3 = document.querySelector("#z3");
-
-var cellId = 0;
-var token = selection;
-var tokenHover = preselection;
-
-console.log(token, tokenHover);
 
 function hoverOn() {
   cellId.classList.add(tokenHover);
@@ -159,7 +154,7 @@ z2.addEventListener("mouseover", function () {
 z3.addEventListener("mouseover", function () {
   cellId = z3;activity();return cellId;
 });
-},{}],9:[function(require,module,exports) {
+},{}],21:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -181,7 +176,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '34021' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '40913' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -282,5 +277,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}]},{},[9,3])
+},{}]},{},[21,6])
 //# sourceMappingURL=/dist/TicTacToe.map

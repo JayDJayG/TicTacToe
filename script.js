@@ -3,26 +3,28 @@ var buttonX = document.querySelector("#theX");
 var buttonO = document.querySelector("#theO");
 var initialsc = document.querySelector(".initialize");
 
-var selection = "";
-var preselection ="";
+var token = ""
+var tokenHover = "";
+var cellId = 0;
 
 //Hidding initialization screen and
 buttonX.addEventListener("click", function() {
     initialsc.classList.add("hidden");
-    selection+= "x";
-    preselection+= "xh";
+    token+= "x";
+    tokenHover+= "xh";
+    console.log(token, tokenHover);
+
   }
 );
 
-
 buttonO.addEventListener("click", function() {
     initialsc.classList.add("hidden");
-    selection+= "o";
-    preselection+= "oh";
+    token+= "o";
+    tokenHover+= "oh";
+    console.log(token, tokenHover);
+
 }
 );
-
-console.log(selection, preselection);
 
 //Board variable initialization
 
@@ -36,11 +38,6 @@ var z1=document.querySelector("#z1");
 var z2=document.querySelector("#z2");
 var z3=document.querySelector("#z3");
 
-var cellId = 0;
-var token = selection;
-var tokenHover = preselection;
-
-console.log(token, tokenHover);
 
 function hoverOn() {
   cellId.classList.add(tokenHover);
