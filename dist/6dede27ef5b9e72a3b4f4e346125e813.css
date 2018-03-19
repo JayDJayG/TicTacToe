@@ -56,13 +56,18 @@ body{
 }
 
 .button{
-  height:100px;
-  width:100px;
-  background: red;
-  position: absolute;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: pink;
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
 }
 
 .board {
@@ -99,7 +104,15 @@ tr {
   border-top: 3px solid black;
  }
 
-.o {
+ .o {
+   background-image: url("1cc11c8ca5b6bdcef96466f4fdddcdf4.jpg");
+   background-size: cover;
+   background-position: center;
+   height:180px;
+   
+ }
+
+.oh {
   background-image: url("1cc11c8ca5b6bdcef96466f4fdddcdf4.jpg");
   background-size: cover;
   background-position: center;
@@ -109,6 +122,17 @@ tr {
   background-image: url("27fe09074c07907bba17b6b760addba0.jpg");
   background-size: cover;
   background-position: center;
+}
+.xh {
+  background-image: url("27fe09074c07907bba17b6b760addba0.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: .3;
+}
+
+#theX{
+  position: relative;
+  margin-left: 400px;
 }
 
 .xh {

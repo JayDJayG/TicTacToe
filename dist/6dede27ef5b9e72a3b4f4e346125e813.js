@@ -71,7 +71,7 @@ require = (function (modules, cache, entry) {
 
   // Override the current require with this new one
   return newRequire;
-})({19:[function(require,module,exports) {
+})({8:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -101,7 +101,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],13:[function(require,module,exports) {
+},{}],5:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -132,13 +132,13 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":19}],5:[function(require,module,exports) {
+},{"./bundle-url":8}],2:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./O.jpg":15,"./X.jpg":16,"_css_loader":13}],21:[function(require,module,exports) {
+},{"./O.jpg":6,"./X.jpg":7,"_css_loader":5}],9:[function(require,module,exports) {
 
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
@@ -160,7 +160,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '38065' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '34021' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -261,7 +261,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.require, id);
   });
 }
-},{}],23:[function(require,module,exports) {
+},{}],11:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -340,7 +340,7 @@ LazyPromise.prototype.then = function (onSuccess, onError) {
 LazyPromise.prototype.catch = function (onError) {
   return this.promise || (this.promise = new Promise(this.executor).catch(onError));
 };
-},{"./bundle-url":19}],0:[function(require,module,exports) {
-var b=require(23);b.load([["1cc11c8ca5b6bdcef96466f4fdddcdf4.jpg",15],["27fe09074c07907bba17b6b760addba0.jpg",16]]);
-},{}]},{},[21,0])
+},{"./bundle-url":8}],0:[function(require,module,exports) {
+var b=require(11);b.load([["1cc11c8ca5b6bdcef96466f4fdddcdf4.jpg",6],["27fe09074c07907bba17b6b760addba0.jpg",7]]);
+},{}]},{},[9,0])
 //# sourceMappingURL=/dist/6dede27ef5b9e72a3b4f4e346125e813.map
