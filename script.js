@@ -1,151 +1,69 @@
 
 var buttonX = document.querySelector("#theX");
 var buttonO = document.querySelector("#theO");
-
 var initialsc = document.querySelector(".initialize");
 
-var selection = "";
-var preselection ="";
+var token = ""
+var tokenHover = "";
+var cellId = 0;
 
 //Hidding initialization screen and
-  buttonX.addEventListener("click", function() {
+buttonX.addEventListener("click", function() {
     initialsc.classList.add("hidden");
-    selection+= "x";
-    preselection+= "xh";
-  }
-  );
+    token+= "x";
+    tokenHover+= "xh";
+    console.log(token, tokenHover);
 
-  buttonO.addEventListener("click", function() {
+  }
+);
+
+buttonO.addEventListener("click", function() {
     initialsc.classList.add("hidden");
-  selection+= "o";
-  preselection+= "oh";
+    token+= "o";
+    tokenHover+= "oh";
+    console.log(token, tokenHover);
+
 }
 );
 
-
-
-
 //Board variable initialization
 
-var w1 = document.getElementsByClassName("w1");
-var w2 = document.getElementsByClassName("w2");
-var w3 = document.getElementsByClassName("w3");
-var y1 = document.getElementsByClassName("y1");
-var y2 = document.getElementsByClassName("y2");
-var y3 = document.getElementsByClassName("y3");
-var z1 = document.getElementsByClassName("z1");
-var z2 = document.getElementsByClassName("z2");
-var z3 = document.getElementsByClassName("z3");
+var w1=document.querySelector("#w1");
+var w2=document.querySelector("#w2");
+var w3=document.querySelector("#w3");
+var y1=document.querySelector("#y1");
+var y2=document.querySelector("#y2");
+var y3=document.querySelector("#y3");
+var z1=document.querySelector("#z1");
+var z2=document.querySelector("#z2");
+var z3=document.querySelector("#z3");
 
 
-//Functions
+function hoverOn() {
+  cellId.classList.add(tokenHover);
+  };
 
+  function hoverOff() {
+  cellId.classList.remove(tokenHover)
+};
 
-//the function arrayCleaning returns all the spots to be cleared for X or O when the mouse is not over them
-
-function arrayCleaning(str){
-  //this variable arrayOfSquares provides assistance to clear the sqares that are not pre-selected
-
-  var arrayOfSquares = ['w1', 'w2', 'w3', 'y1', 'y2', 'y3', 'z1', 'z2', 'z3'];
-  var filtered = arrayOfSquares.filter(function(value){
-    return value !== str;
-  });
-  return filtered;
-}
-
-//The function classCleaning will take care of clearing the non-selected Xs or Os in the board, during the preselection phase
-function classCleaning(arr){
-  var clearElement = {};
-  var i = 0;
-
-  while (i < arr.length){
-    clearElement = document.getElementById(arr[i]);
-    clearElement.classList.remove(preselection);
-    i++;
+function cellClick() {
+  cellId.classList.add(token)
+  cellId.removeEventListener("mouseover", hoverOn);
   }
 
+function activity() {
+  cellId.addEventListener("mouseover", hoverOn);
+  cellId.addEventListener("mouseout", hoverOff);
+  cellId.addEventListener("click", cellClick);
 }
 
-//The mouseFunction Function handles the exact position of the mouse,
-
- function mouseFunction(e) {
-    var x = e.clientX;
-    var y = e.clientY;
-    var coor = "Coordinates: " + x + "," + y + ")";
-    console.log(coor);
-
-    var element = {};
-    var arr = [];
-
-//First column handeling
-if (x >= 517 && x < 684){
-
-    if(y >= 93 && y <= 270){
-
-
-      classCleaning(arrayCleaning("w1"));
-      element = document.getElementById("w1");
-      element.classList.add(preselection);
-      }
-
-    else if(y > 271 && y < 449){
-
-        classCleaning(arrayCleaning("y1"));
-        element = document.getElementById("y1");
-        element.classList.add(preselection);
-      }
-
-      else {
-        classCleaning(arrayCleaning("z1"));
-        element = document.getElementById("z1");
-        element.classList.add(preselection);
-      }
-  }
-
-  else if(x > 685 && x < 855){
-
-    if(y >= 93 && y < 270){
-
-      classCleaning(arrayCleaning("w2"));
-      element = document.getElementById("w2");
-      element.classList.add(preselection);
-      }
-
-    else if(y > 271 && y < 449){
-
-        classCleaning(arrayCleaning("y2"));
-        element = document.getElementById("y2");
-        element.classList.add(preselection);
-      }
-
-      else {
-        classCleaning(arrayCleaning("z2"));
-        element = document.getElementById("z2");
-        element.classList.add(preselection);
-      }
-  }
-
-  else{
-    if(y >= 93 && y < 270){
-
-      classCleaning(arrayCleaning("w3"));
-      element = document.getElementById("w3");
-      element.classList.add(preselection);
-      }
-
-    else if(y > 271 && y < 449){
-
-        classCleaning(arrayCleaning("y3"));
-        element = document.getElementById("y3");
-        element.classList.add(preselection);
-      }
-
-      else {
-        classCleaning(arrayCleaning("z3"));
-        element = document.getElementById("z3");
-        element.classList.add(preselection);
-      }
-
-    }
-
-}
+w1.addEventListener("mouseover", function() {cellId=w1; activity(); return cellId;});
+w3.addEventListener("mouseover", function() {cellId=w3; activity(); return cellId;});
+w2.addEventListener("mouseover", function() {cellId=w2; activity(); return cellId;});
+y1.addEventListener("mouseover", function() {cellId=y1; activity(); return cellId;});
+y2.addEventListener("mouseover", function() {cellId=y2; activity(); return cellId;});
+y3.addEventListener("mouseover", function() {cellId=y3; activity(); return cellId;});
+z1.addEventListener("mouseover", function() {cellId=z1; activity(); return cellId;});
+z2.addEventListener("mouseover", function() {cellId=z2; activity(); return cellId;});
+z3.addEventListener("mouseover", function() {cellId=z3; activity(); return cellId;});
